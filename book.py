@@ -18,6 +18,7 @@ if __name__ == "__main__":
     book_name = '诡秘之主.txt'
     req = requests.get(url = target)
     req.encoding = 'utf-8'
+    
     html = req.text
     bs = BeautifulSoup(html,'lxml')
     chapters = bs.find('div',id='list').find_all('a')
